@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SparBank Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Willkommen bei SparBank</h1>
+        </div>
+        <div class="form-container">
+            <form action="login.php" method="POST" class="login-form">
+                <h2>Anmeldung</h2>
+                <div class="input-container">
+                    <label for="username">Benutzername:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-container">
+                    <label for="password">Passwort:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <input type="submit" value="Anmelden" class="submit-btn">
+            </form>
+            <div class="link">
+                <a href="index.html">Zurück zur Homepage</a>
+                <br>
+                <a href="passwort.html">Passwort vergessen</a>
+                <br>
+                <a href="altlogin.html">Alternativer Login</a>
+            </div>
+        </div>
+    </div>
+    <footer>&#169 2024 Sparbank</footer>
+</body>
+
+</html>
