@@ -103,3 +103,24 @@ for (let i = 0; i < laufzeit; i++) {
     endkapital = endkapital * (1 + zinssatz);
     console.log(endkapital);
 }
+
+
+console.log('Aufgabe 9');
+console.log('wenn der artikel lebensmittel ist dann ist die mehrsteurer 7%, ansonsten 19%');
+console.log('in exel');
+
+let artikel = 'lebensmittel';
+let mwstSatz = (artikel === "lebensmittel") ? 7 : 19;
+
+// der
+// auf
+// Wert
+// anders als in exel 
+// für einen vergleich 
+
+
+console.log('der mwst satz für en artikel '+ artikel + ' berägt '+ mwstSatz + '%');
+
+console.log('Aufgabe 10');
+console.log('hausaufgabe  eingene aufganbe mit wenn funktion / if else');
+// geschlecht anrede
