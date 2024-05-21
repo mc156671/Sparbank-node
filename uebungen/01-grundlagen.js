@@ -124,3 +124,8 @@ console.log('der mwst satz für en artikel '+ artikel + ' berägt '+ mwstSatz + 
 console.log('Aufgabe 10');
 console.log('hausaufgabe  eingene aufganbe mit wenn funktion / if else');
 // geschlecht anrede
+
+let geschlecht = 'masculin';
+let anrede = (geschlecht === "masculin") ? 'Herr' : 'Frau';
+
+console.log('Guten tag ' + anrede + ' Mustermann');
