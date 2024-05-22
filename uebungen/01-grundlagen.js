@@ -118,14 +118,85 @@ let mwstSatz = (artikel === "lebensmittel") ? 7 : 19;
 // anders als in exel 
 // für einen vergleich 
 
-
 console.log('der mwst satz für en artikel '+ artikel + ' berägt '+ mwstSatz + '%');
 
 console.log('Aufgabe 10');
-console.log('hausaufgabe  eingene aufganbe mit wenn funktion / if else');
-// geschlecht anrede
+console.log('wenn der der gesamtbetrag gößre oder glecih 100 euro ist beträgt der rabatt 20%')
+console.log('ansonsten keinen rabatt')
 
-let geschlecht = 'masculin';
-let anrede = (geschlecht === "masculin") ? 'Herr' : 'Frau';
+// die
+let gesamtbetrag = 120;
+let rabatt;
 
-console.log('Guten tag ' + anrede + ' Mustermann');
+// 
+if (gesamtbetrag >= 100){
+
+    // 
+    rabatt = 20;
+}else{
+
+    //
+    rabatt = 0;
+}
+
+console.log('Bei einem gesamt betrag '+ gesamtbetrag + ' Euro brägt der Rabatt '+ rabatt + '%.');
+
+console.log('Aufgabe 11');
+console.log('wenn der der gesamtbetrag gößre oder glecih 100 euro ist beträgt der rabatt 20%')
+console.log('wenn der der gesamtbetrag zwischen 50 und 100 euro ist beträgt der rabatt 10%')
+console.log('ansonsten keinen rabatt')
+
+gesamtbetrag = 120;
+rabatt;
+
+// 
+if (gesamtbetrag >= 100){
+    rabatt = 20;
+}else{
+    if (gesamtbetrag >=50){
+        rabatt = 10;
+    }else{
+        rabatt = 0;
+    }
+}
+
+console.log('Bei einem gesamt betrag '+ gesamtbetrag + ' Euro brägt der Rabatt '+ rabatt + '%.');
+
+console.log('Aufgabe 12');
+console.log('wenn der der gesamtbetrag gößre oder glecih 200 euro ist, ist der versand kostenlos');
+console.log('wenn der der gesamtbetrag zwischen 100 und 200 euro ist beträgt versand 5 Euro');
+console.log('ansonsten versand 10 Euro');
+
+gesamtbetrag = 120;
+let versand;
+
+if (gesamtbetrag >= 200){
+    versand = 0;
+}else{
+    if (gesamtbetrag >=100){
+        versand = 5;
+    }else{
+        versand = 10;
+    }
+}
+
+console.log('Bei einem Gesamtbetrag '+ gesamtbetrag + ' Euro brägt der Versand '+ versand + ' Euro.');
+
+console.log('Aufgabe 13');
+console.log('Frauen ab 18 Zahlen 10 Euro eintritt. Männer ab 18 zahlen 15 Euro eintritt. Kinder zahlen 6 Euro');
+
+let alter = 17;
+let geschlecht = 'm';
+let eintritt;
+
+if (alter < 18){
+    eintritt = 6;
+}else{
+    if (geschlecht === 'm'){
+        eintritt = 15;
+    }else{
+        eintritt = 10;
+    }
+}
+
+console.log('der eintritt kostet ' + eintritt + ' euro');
