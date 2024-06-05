@@ -62,37 +62,37 @@ let kapitalNachZweiJahren = kapitalNachEinemJahr * (1 + zinssatz);
 
 console.log("Kapital nach zwei Jahren: " + kapitalNachZweiJahren + " EUR.");
 
-let endkapital = startkapital * Math.pow(1 + zinssatz, laufzeit);
+let endkapital = startkapital * Math.pow((1 + zinssatz) , laufzeit);
 
 console.log("Endkapital nach " + laufzeit + " Jahren: " + endkapital + " EUR.");
 
-console.log('Aufgabe 6');
-console.log('Die Werte aus de vorherigen aufgabe werden als reihe dargestellt');
+console.log('Aufgabe 7');
+console.log('Die Werte aus der vorherigen Aufgabe werden als Reihe dargestellt.');
 
-// im zeitpunkt null 
-endkapital = startkapital;
+// Im Zeitpunkt Null ist das endkapital = dem startkapital
+endkapital = startkapital; 
 console.log(endkapital);
 
-// nach 
-endkapital = endkapital * (1 + zinssatz);
+// Nach dem ersten Jahr erhöht sich das Endkapital um den Faktor 1,1
+endkapital =  endkapital * (1 + zinssatz);
 console.log(endkapital);
 
-// nach zweiten
-endkapital = endkapital * (1 + zinssatz);
+// Nach dem zweiten Jahr wird dem Endkapital der Wert des Enkapitals * 1,1 zugewiesen.
+endkapital =  endkapital * (1 + zinssatz);
 console.log(endkapital);
 
-// nach DREI
-endkapital = endkapital * (1 + zinssatz);
+// Nach dem dritten Jahr wird dem Endkapital der Wert des Enkapitals * 1,1 zugewiesen.
+endkapital =  endkapital * (1 + zinssatz);
 console.log(endkapital);
 
-// nach 4
-endkapital = endkapital * (1 + zinssatz);
+// Nach dem vierten Jahr wird dem Endkapital der Wert des Enkapitals * 1,1 zugewiesen.
+endkapital =  endkapital * (1 + zinssatz);
 console.log(endkapital);
 
 console.log('Aufgabe 8');
-console.log('In Aufgabe 7 wurde die anweisung endkapital =... mehrfach wieder holt.');
-console.log('Um sich tipparbeit zu sparen und die wiederholung der Anweisung in der ');
-console.log('gewünschten Häufigkeit durchzuführen, nutzt der Programierer eine Schleife.');
+console.log('In Aufgabe 7 wurde die Anweisung endkapital = ... mehrfach wiederholt.');
+console.log('Um sich Tipparbeit zu sparen und die Wiederholung der Anweisung in der');
+console.log('gwünschten Häufigkeit durchzuführen, nutzt der Programmierer eine Schleife.'); 
 
 startkapital = 100;
 endkapital = startkapital;
@@ -100,103 +100,118 @@ zinssatz = 0.1;
 laufzeit = 3;
 
 for (let i = 0; i < laufzeit; i++) {
-    endkapital = endkapital * (1 + zinssatz);
-    console.log(endkapital);
+    endkapital =  endkapital * (1 + zinssatz);
+    console.log("Endkapital nach Jahr " + (i+1) + ": " + endkapital + "EUR.");
 }
 
 
 console.log('Aufgabe 9');
-console.log('wenn der artikel lebensmittel ist dann ist die mehrsteurer 7%, ansonsten 19%');
-console.log('in exel');
+console.log('Wenn der Artikel Lebensmittel ist, dann ist die MwSt 7%, ansonsten 19%.');
+console.log('In Excel würde das so aussehen: =wenn(A1=lebensmittel;7;19)');
 
-let artikel = 'lebensmittel';
-let mwstSatz = (artikel === "lebensmittel") ? 7 : 19;
+let artikel = 'Lebensmittel';
+let mwstSatz = (artikel === "Lebensmittel") ? 7 : 19;
 
-// der
-// auf
-// Wert
-// anders als in exel 
-// für einen vergleich 
+// Der Ausdruck ist vergleichbar mit Excel. In den runden Klammern findet die Prüfung
+// auf wahr oder falsch statt. Wenn article === "Lebensmittel" wahr ist, wird der
+// Wert vor dem Doppelpunkt zurückgegeben. Ansonten der Wert hinter dem Doppelpunkt.
+// Anders als in Excel ist das einfache Gleichheitszeichen für eine Zuweisung reserviert.
+// Für einen Vergleich muss in Javascript mit zwei oder drei === gearbeitet werden. 
 
-console.log('der mwst satz für en artikel '+ artikel + ' berägt '+ mwstSatz + '%');
+console.log('Der Mehrwertsteuersatz für den Artikel ' + artikel + ' beträgt ' + mwstSatz +'%.');
 
 console.log('Aufgabe 10');
-console.log('wenn der der gesamtbetrag gößre oder glecih 100 euro ist beträgt der rabatt 20%')
-console.log('ansonsten keinen rabatt')
+console.log('Wenn der Gesamtbetrag des Einkaufs größer oder gleich 100 Euro ist, beträgt der Rabatt 20%.');
+console.log('Ansonsten gibt es keinen Rabatt.');
 
-// die
+// Die Variablen werden deklariert und der Gesamtbetrag mit dem Wert 120 initialisiert.
 let gesamtbetrag = 120;
 let rabatt;
 
-// 
+// Die if-Kontrollstruktur kann zwei Fälle unterscheiden.
 if (gesamtbetrag >= 100){
 
-    // 
+    // Wenn die Prüfung in den runden Klammern wahr ist, wird der Wert 20 zugewiesen.
     rabatt = 20;
 }else{
 
-    //
+    // Wenn die Prüfung in den runden Klammern unwahr ist, wird der Wert 0 zugewiesen.
     rabatt = 0;
 }
 
-console.log('Bei einem gesamt betrag '+ gesamtbetrag + ' Euro brägt der Rabatt '+ rabatt + '%.');
+console.log('Bei einem Gesamtbetrag von ' + gesamtbetrag + ' Euro beträgt der Rabatt ' + rabatt + " Prozent.");
 
 console.log('Aufgabe 11');
-console.log('wenn der der gesamtbetrag gößre oder glecih 100 euro ist beträgt der rabatt 20%')
-console.log('wenn der der gesamtbetrag zwischen 50 und 100 euro ist beträgt der rabatt 10%')
-console.log('ansonsten keinen rabatt')
+console.log('Wenn der Gesamtbetrag des Einkaufs größer oder gleich 100 Euro ist, beträgt der Rabatt 20%.');
+console.log('Wenn der Gesamtbetrag des Einkaufs zwischen 50 und kleiner 100 Euro ist, beträgt der Rabatt 10%.');
+console.log('Ansonsten gibt es keinen Rabatt.');
 
-gesamtbetrag = 120;
+gesamtbetrag = 49;
 rabatt;
 
-// 
+// Hier werden drei Fälle unterschieden. Dazu muss die if-Kontrollstruktur geschachtelt werden.
 if (gesamtbetrag >= 100){
     rabatt = 20;
-}else{
-    if (gesamtbetrag >=50){
+}else{    
+    if (gesamtbetrag >= 50){
         rabatt = 10;
-    }else{
+    }else{    
         rabatt = 0;
     }
 }
 
-console.log('Bei einem gesamt betrag '+ gesamtbetrag + ' Euro brägt der Rabatt '+ rabatt + '%.');
+console.log('Bei einem Gesamtbetrag von ' + gesamtbetrag + ' Euro beträgt der Rabatt ' + rabatt + " Prozent.");
 
 console.log('Aufgabe 12');
-console.log('wenn der der gesamtbetrag gößre oder glecih 200 euro ist, ist der versand kostenlos');
-console.log('wenn der der gesamtbetrag zwischen 100 und 200 euro ist beträgt versand 5 Euro');
-console.log('ansonsten versand 10 Euro');
+console.log('Wenn der Gesamtbetrag des Einkaufs größer oder gleich 200 Euro ist, ist der Versand kostenlos.');
+console.log('Wenn der Gesamtbetrag des Einkaufs zwischen 100 und kleiner 200 Euro ist, betragen Versandkosten 5 Euro.');
+console.log('Ansonsten betragen die Versandkosten 10 Euro.');
 
-gesamtbetrag = 120;
-let versand;
+let versandkosten;
+let einkaufwert = 110;
 
-if (gesamtbetrag >= 200){
-    versand = 0;
+if(einkaufwert >= 200){
+    versandkosten = 0;
 }else{
-    if (gesamtbetrag >=100){
-        versand = 5;
+    if(einkaufwert >= 100){
+        versandkosten = 5;
     }else{
-        versand = 10;
+        versandkosten = 10;
     }
 }
 
-console.log('Bei einem Gesamtbetrag '+ gesamtbetrag + ' Euro brägt der Versand '+ versand + ' Euro.');
+console.log('Bei einem Einkaufswert von ' + einkaufwert + ' Euro betragen die Versandkosten ' + versandkosten + ' Euro.');
+
 
 console.log('Aufgabe 13');
-console.log('Frauen ab 18 Zahlen 10 Euro eintritt. Männer ab 18 zahlen 15 Euro eintritt. Kinder zahlen 6 Euro');
+console.log('Frauen ab 18 zahlen 10 Euro Eintritt. Männer ab 18 zahlen 15 Euro Eintritt. Minderjährige zahlen 6 Euro.');
 
-let alter = 17;
-let geschlecht = 'm';
 let eintritt;
+let alter = 10;
+let geschlecht = 'm';
 
-if (alter < 18){
-    eintritt = 6;
-}else{
-    if (geschlecht === 'm'){
-        eintritt = 15;
-    }else{
-        eintritt = 10;
-    }
+if(geschlecht === 'w' && alter >=18){
+    eintritt = 10;
 }
 
-console.log('der eintritt kostet ' + eintritt + ' euro');
+if(geschlecht === 'm' && alter >=18){
+    eintritt = 15;
+}
+
+if(alter <18){
+    eintritt = 6;
+}
+
+console.log('Bei einem Alter von ' + alter + ' Jahren zahlt eine Person mit Geschlecht ' + geschlecht + ' ' + eintritt + ' Euro.');
+
+
+console.log('Aufgabe 14');
+console.log('Wenn eine person 18 jahre alt ist dann ist sie erwachsen ansonsten ist sie minderjährig');
+
+let age = 18;
+
+if (age >= 18) {
+    console.log("Du bist Erwachsen.");
+} else {
+    console.log("Du bist minderjährig.");
+}
