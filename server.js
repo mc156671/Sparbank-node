@@ -43,4 +43,5 @@ app.listen(PORT, HOST);
 console.log(`Running on http://${HOST}:${PORT}`);
 
 // mit der funktion requiere wird die datei in den runden klammeren eingelesen.
-require('./uebungen/03-objekte.js');
+// require('./uebungen/03-objekte.js');
+require('./klausur.js');
