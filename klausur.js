@@ -14,11 +14,18 @@ class Wuerfel {
         this.Volumen
         this.Kantenlaenge
     }
+
+    BerechneVolumen(){
+        this.Volumen = Math.pow(this.Kantenlaenge, 3)
+    }
 }
 
-let wuerfel = new Wuerfel
+let wuerfel = new Wuerfel()
 wuerfel.Kantenlaenge = 11
 wuerfel.Volumen = Math.pow(wuerfel.Kantenlaenge, 3)
+
+wuerfel.Kantenlaenge = 8
+wuerfel.BerechneVolumen();
 
 console.log("Das Volumen des Würfels ist: " + wuerfel.Volumen + " cm3.")
 
@@ -34,7 +41,8 @@ if(wuerfel.Volumen >= 1000){
 // Nutzen Sie die Math-Bibliothek .sqrt(), um die Wurzel aus dem Volumen zu errechnen. Geben Sie die Kantenlänge in einem Antwortsatz aus.
 
 console.log(Math.sqrt(wuerfel.Volumen) + "ist die Wurzel des Volumens")
-
+console.log(Math.pow(wuerfel.Volumen, 1/3))
+console.log(Math.cbrt(wuerfel.Volumen))
 console.log("Aufgabe 2")
 // Sie werden beauftragt ein Schulverwaltungsprogramm für das BKB zu erstellen. Konkret sollen Sie sich in einem ersten Schritt
 // die Zeugnisse vornehmen. Deklarieren, Instanziieren und Initialisieren Sie ein Zeugnisobjekt, 
